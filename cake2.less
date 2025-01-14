@@ -1,0 +1,142 @@
+/* ============================================== VARIABLES */
+@D: 300px; /* Control diameter */
+
+/* ============================================== POSITION */
+.cake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: @D;
+  height: @D;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffcccc, #ff99cc);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================== BASE */
+.cake:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: @D;
+  height: @D / 50;
+  background: #fff;
+  border-radius: @D;
+}
+
+/* ============================================== LAYERS */
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: @D;
+  height: @D / 3;
+  border-radius: @D / 10;
+  background: linear-gradient(to bottom, #ff9966, #ff6666);
+  z-index: 5;
+}
+
+.layer:after,
+.layer:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: @D / 30;
+  background: rgba(255, 255, 255, 0.6);
+  left: 0;
+}
+
+.layer:after {
+  top: 25%;
+}
+
+.layer:before {
+  top: 55%;
+}
+
+/* ============================================== CANDLES */
+.candle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: @D / 20;
+  height: @D / 4;
+  background: linear-gradient(to bottom, #fff, #ffcce6);
+  border-radius: @D / 20;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+.candle:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: @D / 25;
+  height: @D / 10;
+  background: radial-gradient(circle, #ffcc33, #ff9966);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 204, 51, 0.8), 0 0 40px rgba(255, 153, 102, 0.6);
+}
+
+/* ============================================== SPRINKLES */
+.sprinkle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: #ff66b2;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sprinkle:nth-child(1) {
+  top: 20%;
+  left: 30%;
+}
+
+.sprinkle:nth-child(2) {
+  top: 10%;
+  left: 60%;
+}
+
+.sprinkle:nth-child(3) {
+  top: 50%;
+  left: 40%;
+}
+
+.sprinkle:nth-child(4) {
+  top: 80%;
+  left: 70%;
+}
+
+/* ============================================== TEXT */
+h1 {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================== BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #ffe6f2, #ffcce6);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "birthday",
+  "version": "1.0.0",
+  "description": "A simple project for birthday greetings.",
+  "main": "index.js", 
+  "scripts": {
+    "start": "http-server -p 8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Craabbb/Birthday.git"
+  },
+  "keywords": [
+    "Birthday",
+    "Greetings",
+    "Celebration"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Craabbb/Birthday/issues"
+  },
+  "homepage": "https://github.com/Craabbb/Birthday#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
